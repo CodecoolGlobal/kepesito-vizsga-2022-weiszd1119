@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef17c2b8-773c-41ab-9135-d9a9f5b5aa7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SelectDay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SelectList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SiteFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SiteFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TwoInputFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TwoInputFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SiteFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SiteFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TwoInputFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TwoInputFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,17 @@
     "last_opened_file_path": "C:/Users/Felhasználó/IdeaProjects/kepesito-vizsga-2022-weiszd1119/pom.xml"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SeleniumTest.SelectDayTest">
+    <configuration name="SeleniumTest.SelectDayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TAKepesitoVizsga" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
+      <option name="METHOD_NAME" value="SelectDayTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeleniumTest.TestInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TAKepesitoVizsga" />
       <option name="PACKAGE_NAME" value="" />
@@ -64,6 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SeleniumTest.SelectDayTest" />
         <item itemvalue="JUnit.SeleniumTest.TestInput" />
       </list>
     </recent_temporary>
@@ -78,5 +94,16 @@
       <updated>1657875604636</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

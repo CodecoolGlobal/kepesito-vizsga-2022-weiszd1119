@@ -21,6 +21,8 @@ public class TwoInputFields extends BasePage{
 	
 	private final By findGetTotalButton = By.xpath("//*[@id=\"gettotal\"]/button");
 	
+	private final By findPopupWindowCloseButton = By.id("at-cv-lightbox-close");
+	
 	//Metódusok
 	
 	//Url címre ugrás
@@ -39,8 +41,11 @@ public class TwoInputFields extends BasePage{
 		driver.findElement(findSecondValueField).sendKeys(inputSecondField);
 	}
 	
-	//Gomb lenyomása
+	//Gombok lenyomása
 	
+	public void pushClosePopupWindow() {
+		driver.findElement(findPopupWindowCloseButton).click();
+	}
 	public void pushGetTotalButton() {
 		driver.findElement(findGetTotalButton).click();
 	}

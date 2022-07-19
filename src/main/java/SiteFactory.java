@@ -5,6 +5,8 @@ public class SiteFactory {
 		switch (name) {
 			case "TwoInputFields":
 				return new TwoInputFields(driver);
+			case "SelectDay":
+				return new SelectDay(driver);
 			default:
 				return null;
 		}

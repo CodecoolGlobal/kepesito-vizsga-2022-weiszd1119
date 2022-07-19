@@ -41,6 +41,7 @@ public class SeleniumTest {
 		TwoInputFields twoInputFields = (TwoInputFields) SiteFactory.Create("TwoInputFields", driver);
 		twoInputFields.navigate();
 		Thread.sleep(5000);
+		twoInputFields.pushClosePopupWindow();
 		twoInputFields.writeIntoFirstValueField();
 		twoInputFields.writeIntoSecondValueField();
 		twoInputFields.pushGetTotalButton();
@@ -55,8 +56,20 @@ public class SeleniumTest {
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet a következők szerint: a Select List Demo szekció lenyíló mezőjében válaszd ki a hét utolsó napját és ellenőrizd, hogy az oldalon helyesen jelenik meg a kiválasztott érték
     Tesztadatként használd az hét utolsó napját
      */
-    public void SelectDayTest()
-    {}
+    @Test
+	public void SelectDayTest() throws InterruptedException
+    {
+	    SelectDay selectDay = (SelectDay) SiteFactory.Create("SelectDay", driver);
+	    selectDay.navigate();
+		Thread.sleep(5000);
+	    selectDay.clickSingleDropdownList();
+	    selectDay.selectFromSingleList();
+	    selectDay.currentDayResult();
+	    // Assertions
+	    String expectedDayResult = "Day selected :- Sunday";
+	    String actualDayResult = selectDay.currentDayResult();
+	    Assertions.assertEquals(expectedDayResult, actualDayResult);
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/bootstrap-modal-demo.html#

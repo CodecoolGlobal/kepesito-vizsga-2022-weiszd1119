@@ -9,6 +9,8 @@ public class SiteFactory {
 				return new SelectDay(driver);
 			case "ModalAlert":
 				return new ModalAlert(driver);
+			case "ListNameCard":
+				return new ListNameCard(driver);
 			default:
 				return null;
 		}

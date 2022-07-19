@@ -94,14 +94,20 @@ public class SeleniumTest {
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A teszteset ellenőrizze a névjegykártyák tartalmát.Olvasd ki a neveket a megjelenő névjegykártyákról és ellenőrzésként hasonlítsd össze egy elvárt eredményként megadott listával.
     Használj relatív útvonalat a névjegykártya név elemeinek kiolvasásához.
      */
-    public void NamecardTest()
-    {}
+    @Test
+	public void NamecardTest() throws InterruptedException
+    {
+	    ListNameCard listNameCard = (ListNameCard) SiteFactory.Create("ListNameCard", driver);
+	    listNameCard.navigate();
+	    Thread.sleep(5000);
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/table-data-download-demo.html
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetet ellenőrizze a táblázatból a neveket, amelyeket a táblázat első oszlop tartalmaz. Gyűjtsd össze a neveket és tárold le a names.txt fájlba majd a tesztesetben a fájl tartalmát hasonlítsd össze egy elvárt eredménnyel.
      */
-    public void TableTest()
+    @Test
+	public void TableTest()
     {}
 
 }

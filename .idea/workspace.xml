@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SiteFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SiteFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SiteFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SiteFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

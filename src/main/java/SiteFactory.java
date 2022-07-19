@@ -7,6 +7,8 @@ public class SiteFactory {
 				return new TwoInputFields(driver);
 			case "SelectDay":
 				return new SelectDay(driver);
+			case "ModalAlert":
+				return new ModalAlert(driver);
 			default:
 				return null;
 		}

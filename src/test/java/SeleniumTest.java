@@ -75,8 +75,19 @@ public class SeleniumTest {
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/bootstrap-modal-demo.html#
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetben ellenőrizd a modal alert ablak szöveges tartalmát összahasonlítva egy általad definiált elvárt eredménnyel. Nyisd meg a Single Modal ablakot, tárolt el az ablakon megjelenő szöveget egy változóba és zárd be az ablakot a bezárás gombbal
      */
-    public void AlertTest()
-    {}
+    @Test
+	public void AlertTest() throws InterruptedException
+    {
+	    ModalAlert modalAlert = (ModalAlert) SiteFactory.Create("ModalAlert", driver);
+	    modalAlert.navigate();
+	    Thread.sleep(5000);
+	    modalAlert.pushLaunchModalButton();
+		modalAlert.pushCloseModalButton();
+		// Assertions
+	    String expectedAlertResult = "This is the place where the content for the modal dialog displays";
+		String actualAlertResult = modalAlert.currentAlertResult();
+	    Assertions.assertEquals(expectedAlertResult, actualAlertResult);
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: https://demo.seleniumeasy.com/data-list-filter-demo.html

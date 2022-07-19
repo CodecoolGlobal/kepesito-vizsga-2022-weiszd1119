@@ -1,3 +1,17 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 public class SeleniumTest {
 
     /*
@@ -5,8 +19,36 @@ public class SeleniumTest {
     Írj tesztesetet két szám összegének ellenőrzésére a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. Az oldalon, a Two Input Fields” szekcióban két beviteli mezőjét töltsd ki tetszőleges számokkal, majd végezd el a számok összeadásának ellenőrzését kiolvasva az oldalon megjelenő összeget.
     Használj tetszőleges tesztadatot
      */
-    public void TestInput()
-    {}
+    WebDriver driver;
+    @BeforeEach
+    public void setup() {
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--disable-notifications");
+		options.addArguments("--disable-extensions");
+		// options.addArguments("--headless");
+		options.addArguments("--window-size=1920,1080");
+		options.addArguments("start-maximized");
+		driver = new ChromeDriver(options);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+	}
+ 
+	@Test
+	public void TestInput() throws InterruptedException {
+		TwoInputFields twoInputFields = (TwoInputFields) SiteFactory.Create("TwoInputFields", driver);
+		twoInputFields.navigate();
+		Thread.sleep(5000);
+		twoInputFields.writeIntoFirstValueField();
+		twoInputFields.writeIntoSecondValueField();
+		twoInputFields.pushGetTotalButton();
+		// Assertions
+		String expectedGetTotalResult = "0";
+		String actualGetTotalResult = twoInputFields.currentGetTotalResult();
+		Assertions.assertEquals(expectedGetTotalResult, actualGetTotalResult);
+    }
 
     /*
     Töltsd be az alábbi oldalt a böngészőbe: zhttps://demo.seleniumeasy.com/basic-select-dropdown-demo.html

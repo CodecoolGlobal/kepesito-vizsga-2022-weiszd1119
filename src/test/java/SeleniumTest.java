@@ -28,7 +28,7 @@ public class SeleniumTest {
 		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--disable-notifications");
 		options.addArguments("--disable-extensions");
-		// options.addArguments("--headless");
+		options.addArguments("--headless");
 		options.addArguments("--window-size=1920,1080");
 		options.addArguments("start-maximized");
 		driver = new ChromeDriver(options);
@@ -107,7 +107,10 @@ public class SeleniumTest {
     Írj tesztesetet a mellékelt dokumentumban, majd a tesztlépések alapján írj automatizált tesztet. A tesztesetet ellenőrizze a táblázatból a neveket, amelyeket a táblázat első oszlop tartalmaz. Gyűjtsd össze a neveket és tárold le a names.txt fájlba majd a tesztesetben a fájl tartalmát hasonlítsd össze egy elvárt eredménnyel.
      */
     @Test
-	public void TableTest()
-    {}
+	public void TableTest() throws InterruptedException {
+	TableRows tableRows = (TableRows) SiteFactory.Create("TableRows", driver);
+    tableRows.navigate();
+	    Thread.sleep(5000);
+	}
 
 }
